@@ -19,7 +19,6 @@ The double slash `//` operator in Python is used to divide a number by its floor
 - [Summary](#summary)
 
 ## Syntax of the Floor Division <a name="syntax"></a>
-```
 
 The syntax for using the floor division is given as follows:
 ```py
