@@ -26,7 +26,7 @@ quotient = divident // divisor
 ```
 The double slash `//` operator is used in almost identical ways to ordinary division. The only difference is that you use a double slash `//` rather than a single slash `/`.
 
-### Regular Division vs Floor Division (`/` vs `//`) <a name="#versus"></a>
+### Regular Division vs Floor Division (`/` vs `//`) <a name="versus"></a>
 
 The result of regular division (using the `/` operator) is `45/6=7.5`, but using `//` has floored `7.5` down to `7`.
 
