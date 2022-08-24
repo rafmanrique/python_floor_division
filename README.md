@@ -168,7 +168,7 @@ print(math.ceil(11.0)) #Output 11
 
 ## Summary <a name="summary"></a>
 
-When an integer is required or you need to return the smallest integer that is less than or equal to the input, you typically use the floor division operator (`//`). The output will be an integer if the operands are both integers. The result will be a float if either operand is a float.
+So what does `//` mean in Python? When an integer is required or you need to return the smallest integer that is less than or equal to the input, you typically use the floor division operator (`//`). The output will be an integer if the operands are both integers. The result will be a float if either operand is a float.
 
 Although lines with the `//` operator are easy to read, it may be preferable to use `math.floor()` or `math.ceil()` when working with inconsistent and disorganized datasets.
 
