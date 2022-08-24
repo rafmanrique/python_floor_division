@@ -152,7 +152,7 @@ print("floor value of", num2, "=", num4)
 # floor value of -5.79 = 6
 ```
 ### `math.ceil()` Function in Python <a name="ceil"></a>
-Math.ceil() is an alternative to math.floor() that will always round up to the nearest whole number rather than down. For instance:
+`math.ceil()` is an alternative to `math.floor()` that will always round up to the nearest whole number rather than down. For instance:
 
 ```py
 # importing the math library
