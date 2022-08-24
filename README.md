@@ -171,3 +171,7 @@ print(math.ceil(11.0)) #Output 11
 When an integer is required or you need to return the smallest integer that is less than or equal to the input, you typically use the floor division operator (`//`). The output will be an integer if the operands are both integers. The result will be a float if either operand is a float.
 
 Although lines with the `//` operator are easy to read, it may be preferable to use `math.floor()` or `math.ceil()` when working with inconsistent and disorganized datasets.
+
+Last but not least, here is a video which briefly explains what is described in this article:
+
+[![Python Floor Division Tutorial (Double Forward Slash)](https://res.cloudinary.com/marcomontalbano/image/upload/v1661366456/video_to_markdown/images/youtube--tFdVvNbV9-E-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=tFdVvNbV9-E "Python Floor Division Tutorial (Double Forward Slash)")
