@@ -9,8 +9,13 @@ The double slash `//` operator in Python is used to divide a number by its floor
 ## What Does // Mean in Python? Points of Interest
 
  - [Syntax of the Floor Division](#syntax)
-	 - Regular Division vs Floor Division (/ vs //)
+	 - [Regular Division vs Floor Division (`/` vs `//`)](#vs)
 - [Working with Negative Numbers in Floor Divisions](#negative)
+- [Working with Floats in Floor Divisions](#floats)
+- [Alternative methods for `//`](#alternative)
+	- [`__floordiv()__` Function in Python](#floordiv)
+	- [`math.floor()` Function in Python](#math)
+	- [`int()` Function in Python](#int)
 
 ## Syntax of the Floor Division <a name="syntax"></a>
 ```
@@ -21,7 +26,7 @@ quotient = divident // divisor
 ```
 The double slash `//` operator is used in almost identical ways to ordinary division. The only difference is that you use a double slash `//` rather than a single slash `/`.
 
-### Regular Division vs Floor Division (/ vs //)
+### Regular Division vs Floor Division (`/` vs `//`) <a name="#vs"></a>
 
 The result of regular division (using the `/` operator) is `45/6=7.5`, but using `//` has floored `7.5` down to `7`.
 
@@ -37,6 +42,7 @@ num4 = num1 // num2
 
 print("normal division of", num1, "by", num2, "=", num3)
 print("floor division of", num1, "by", num2, "=", num4)
+
 # Output: 
 # normal division of 19 by 5 = 3.8
 # floor division of 19 by 5 = 3
@@ -56,8 +62,89 @@ num6 = num3 // num2
 print("normal division of", num1, "by", num2, "=", num4)
 print("floor division of", num1, "by", num2, "=", num5)
 print("floor division of", num3, "by", num2, "=", num6)
+
 # Output: 
 # normal division of 19 by 5 = 3.8
 # floor division of 19 by 5 = 3
 # floor division of -19 by 5 = -4
+```
+
+## Working with Floats in Floor Divisions <a name="floats"></a>
+Python also supports floor division using floats. The result of floor-dividing floats is a float that represents the closest integer.
+
+Let's have a look at the following float-based floor division example.
+
+```py
+num1 = 17.5
+num2 = 3.3
+num3 = 10
+num4 = 2.5
+num5 = 13.4
+num6 = 3
+num7 = num1 // num2
+num8 = num3 // num4
+num9 = num5 // num6
+
+print("floor division of", num1, "by", num2, "=", num7)
+print("floor division of", num3, "by", num4, "=", num8)
+print("floor division of", num5, "by", num6, "=", num9)
+
+# Output: 
+# floor division of 17.5 by 3.3 = 5.0
+# floor division of 10 by 2.5 = 4.0
+# floor division of 13.4 by 3 = 4.0
+```
+
+As a result, the floor division operation is carried out using floats, and float with integer returns the value rounded down to the nearest integer represented by the floats.
+
+
+## Alternative Methods for `//` <a name="alternative"></a>
+
+When working with messy data, for instance, you could occasionally encounter datasets that contain both integers and floats. In some cases, the `//` operator will output both floats and integers, giving conflicting results. Therefore, utilizing the `//` operator will require additional steps to assure a consistent output if your program depends on integers.
+
+There are a few additional methods for changing the quotient of two numbers so that it functions properly with your software. Using various methods can give you greater control over the outcomes since, for instance, you might not always want to round a value down.
+
+###  `__floordiv()__` Function in Python <a name="floordiv"></a>
+
+
+### `math.floor()` Function in Python <a name="math"></a>
+Python comes with a built-in math module that includes a variety of practical calculating tools. The math.floor() function is one of the math module's built-in features. This function takes a numeric input and rounds it down to the closest integer to return the floor value.
+
+Therefore, math.floor() is an alternative to the / operator since they accomplish the same goal in the background.
+
+Let's have a look at the following illustration of the same:
+
+```py
+# importing the math library
+import math
+
+# declaring the variables
+num1 = 5.79
+num2 = -5.79
+
+# using the floor() function
+num3 = floor(num1)
+num4 = floor(num2)
+
+# printing the values
+print("floor value of", num1, "=", num3)
+print("floor value of", num2, "=", num4)
+
+# Output: 
+# floor value of 5.79 = 5
+# floor value of -5.79 = 6
+```
+### `int()` Function in Python <a name="int"></a>
+Math.ceil() is an alternative to math.floor() that will always round up to the nearest whole number rather than down. For instance:
+
+```py
+# importing the math library
+import math
+
+# using the int() function and printing the values
+print(math.ceil(2.4)) #Output 3
+print(math.ceil(9.3)) #Output 10
+print(math.ceil(-7.3)) #Output -7
+print(math.ceil(25.7)) #Output 26
+print(math.ceil(11.0)) #Output 11
 ```
